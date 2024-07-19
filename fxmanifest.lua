@@ -1,5 +1,7 @@
 fx_version "adamant"
 game {"gta5"}
+lua54 'yes'
+
 
 client_scripts {
     "src/RMenu.lua",
@@ -14,11 +16,13 @@ client_scripts {
 
 
 client_script {
+	'@ox_lib/init.lua',
     "client/*.lua",
 }
 
 
 server_script {
+	'@oxmysql/lib/MySQL.lua',
     "server/*.lua",
     "config.lua"
 }
